@@ -1,0 +1,114 @@
+{% load static %}
+{% include 'base.html' %}
+<!-- header -->
+{% include 'header.html' %}
+<!-- Body -->
+        <div class="shop-page-area pt-75 pb-75">
+            <div class="container">
+                <div class="row flex-row-reverse">
+                    <div class="col-lg-9">
+                        <!--<div class="banner-area pb-30">
+                            <a href="product-details.html"><img alt="" src="{% static 'img/banner/herramientas.jpg' %}"></a>
+                        </div>-->
+                        <div class="shop-topbar-wrapper">
+                            <div class="shop-topbar-left">
+                                <ul class="view-mode">
+                                    <li class="active"><a href="#product-grid" data-view="product-grid"><i class="fa fa-th"></i></a></li>
+                                    <li><a href="#product-list" data-view="product-list"><i class="fa fa-list-ul"></i></a></li>
+                                </ul>
+                                <p>Todos los servicios disponibles</p>
+                            </div>
+                            <div class="product-sorting-wrapper">
+                                <div class="product-shorting shorting-style">
+                                    <label>Gasfitería a domicilio</label>
+                                </div>
+                                <div class="product-show shorting-style">
+                                    <label></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-list-product-wrapper">
+                            <div class="product-grid product-view pb-20">
+                                <div class="row">
+                                {% for servicio in servicios%}
+                                    <div class="product-width col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-30">
+                                        <div class="product-wrapper ">
+                                            <div class="product-img">
+                                                    <img alt="" src="{{ servicio.images.url }}">
+                                                <!--<span>-30%</span>-->
+                                            </div>
+                                            <div class="product-content text-center">
+                                                <h4>
+                                                    <a href="product-details.html">{{ servicio.name }}</a>
+                                                </h4>
+                                                <div class="product-price-wrapper">
+                                                    <p>{{ servicio.description }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="product-list-details">
+                                                <h4>
+                                                    <a href="product-details.html">{{ servicio.name }} </a>
+                                                </h4>
+                                                <div class="product-price-wrapper">
+                                                </div>
+                                                <p>{{ servicio.description }}</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                                </div>
+                            </div>
+                            <div class="pagination-total-pages">
+                                <div class="pagination-style">
+                                    <ul>
+                                        <p>¡Soluciones de gasfitería rápidas y confiables! ¡Contáctanos hoy y mejora tu hogar!<p>
+                                    </ul>
+                                </div>
+                                <div class="total-pages">
+                                    <div class="pagination-style">
+                                        <ul>
+                                            <li><a class="prev-next next" href="https://api.whatsapp.com/send?phone=56933614411&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20gasfiter%C3%ADa.">¡Contáctanos!<i class="ion-ios-arrow-right"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="shop-sidebar-wrapper gray-bg-7 shop-sidebar-mrg">
+                            <div class="shop-widget">
+                                <h4 class="shop-sidebar-title">Información</h4>
+                                <div class="shop-catigory">
+                                    <ul id="faq">
+                                        <h4 class="shop-sidebar-title">Horario</h4> <br>
+                                        <li> <a href="#">Lunes a Sábado</a> </li>
+                                        <li> <a href="#">08:00 - 20:00</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shop-price-filter mt-40 shop-sidebar-border pt-35">
+                                <h4 class="shop-sidebar-title">Comunas</h4>
+                                <div class="price_filter mt-25">
+                                    <span>Servicio a todas las comunas de Santiago </span>
+                                    
+                                </div>
+                            </div>
+                            <div class="shop-widget mt-40 shop-sidebar-border pt-35">
+                                <h4 class="shop-sidebar-title">Contacto</h4>
+                                <div class="compare-product">
+                                    <p>+56933614411</p>
+                                    <p>gasfiteradomicilio93@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+   
+{% include 'base.html' %}
+
+{% include 'footer.html' %}

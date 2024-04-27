@@ -1,0 +1,68 @@
+{% load static %}
+{% include 'base.html' %}
+<header class="header-area clearfix">
+    <div class="header-top">
+        <div class="container">
+            <div class="border-bottom-1">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="welcome-area">
+                            <p>Gasfitería a todo Santiago y alrededores</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <div class="account-curr-lang-wrap f-right">
+                            <ul>
+                                <li class="top-hover"><a href="#">Servicio Profesional</a>
+                                </li>
+                                <li class="top-hover"><a href="#">Teléfono: +56933614411</a>
+                                </li>
+                                <li><a href="#"><img alt="" src="assets/img/icon-img/en.jpg"> gasfiteradomicilio93@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom transparent-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="logo">
+                        <a href="{% url 'inicio' %}">
+                            <img alt="" src="{% static 'img/logoDM12.jpg' %}" style="height: 40%; width: 40%; margin-top: -35px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-6">
+                    <div class="header-bottom-right">
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                    <li class="top-hover"><a href="{% url 'inicio' %}">Inicio</a></li>
+                                    <li class="top-hover"><a href="{% url 'servicios' %}">Servicios</a>
+                                    </li>
+                                    <li><a href="{% url 'contacto' %}">Contacto</a></li> 
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-area">
+                <div class="mobile-menu">
+                    <nav id="mobile-menu-active">
+                        <ul class="menu-overflow">
+                            <li class="top-hover"><a href="{% url 'inicio' %}">Home</a></li>
+                            <li class="top-hover"><a href="{% url 'servicios' %}">Productos</a>
+                            </li>
+                            <li><a href="{% url 'contacto' %}">Contacto</a></li> 
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

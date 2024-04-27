@@ -1,0 +1,102 @@
+{% load static %}
+{% include 'base.html' %}
+
+<style>
+    .imagen-container {
+        max-width: 30%;
+        height: auto;
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+
+    .imagen-container img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Elimina el espacio adicional debajo de la imagen */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+</style>
+<footer class="footer-area pt-58 gray-bg-3">
+    <div class="footer-top gray-bg-3 pb-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-widget footer-widget-red footer-black-color mb-40">
+                        <div class="footer-title mb-30">
+                            <h3>Gasfiter a domicilio</h3>
+                        </div>
+                        <div class="footer-about">
+                            <div class="imagen-container">
+                                <img src="{% static 'img/logoDM12.jpg' %}" alt="Descripción de la imagen" >
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-40">
+                        <div class="footer-title mb-30">
+                            <h4>Redes sociales</h4>
+                        </div>
+                        <div class="social-icon">
+                            <ul>
+                                <li><a class="facebook" href="https://www.facebook.com/groups/934220287007425/"><i class="ion-social-facebook"></i></a>  Gasfiter a domicilio</li>
+                            </ul>
+                            <ul>
+                                <li><a class="instagram" href="https://www.instagram.com/gasfiter_a_domicilio93?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="ion-social-instagram-outline"></i></a>  gasfiter_a_domicilio93</li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-40">
+                        <div class="footer-title mb-30">
+                            <h4>Información</h4>
+                        </div>
+                        <div class="footer-content">
+                            <ul>
+                                <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-40">
+                        <div class="footer-title mb-30">
+                            <h4>Datos de la empresa</h4>
+                        </div>
+                        <div class="footer-newsletter">
+                            <div class="footer-contact mt-20">
+                                <ul>
+                                    <li>Ubicación: Santiago de Chile</li>
+                                    <li>Whatsapp: +56 933614411 </li>
+                                    <li>Email: <a href="https://mail.google.com/mail/u/5/#inbox">gasfiteradomicilio93@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom pb-25 pt-25 gray-bg-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p>Copyright © <a href="#">Phuler</a>. All Right Reserved.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="payment-img f-right">
+                        <a href="#">
+                            <img alt="" src="assets/img/icon-img/payment.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        

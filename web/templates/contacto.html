@@ -1,0 +1,105 @@
+{% load static %}
+{% include 'base.html' %}
+{% include 'header.html' %}
+    <div class="breadcrumb-area gray-bg">
+    </div>
+    <div class="contact-us ptb-68">
+        <div class="container">
+            <div class="row">
+                <div class="">
+                    {% if messages %}
+                <div style="display: flex;justify-content: center;" id="message">
+                {% for message in messages %}
+                    <p class="alert alert-info" style="position: absolute;">{{ message }}</p>
+                {% endfor %}
+                </div>
+                {% endif %}
+                </div>
+                <div class="col-12">
+                    <div class="contact-page-title mb-40">
+                        <h1>
+                            Hola
+                            <br>
+                            Déjanos tu mensaje
+                        </h1>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <ul class="contact-tab-list nav">
+                        <li><a  class="active" href="#contact-form-tab" data-bs-toggle="tab">Déjanos tu consulta</a></li>
+                        <li><a href="#contact-address" data-bs-toggle="tab">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content tab-content-contact">
+                        <div id="contact-form-tab" class="tab-pane fade row d-flex active show">
+                            <div class="col">
+                                <form id="ContactForm" action="#" method="POST">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <input name="full_name" id="full_name" placeholder="Nombre" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <input name="email_contact" id="email_contact" placeholder="Email" type="email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <input name="subject_contact" id="subject_contact" placeholder="Asunto" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <input name="phone_number" id="phone_number" placeholder="Teléfono" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="contact-form-style">
+                                                <textarea name="message_contact" id="message_contact" placeholder="Consulta"></textarea>
+                                                <button class="submit" type="submit">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="contact-address" class="tab-pane fade row d-flex">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="contact-information">
+                                    <h4>Ubicación</h4>
+                                    <p>Santiago y alrededores</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="contact-information contact-mrg">
+                                    <h4>Teléfonos</h4>
+                                    <p>
+                                        <a href="tel:01234567891">+56933614411</a>
+                                        <a href="tel:01234567890">+56931189636</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="contact-information contact-mrg">
+                                    <h4>Correo</h4>
+                                    <p>
+                                        <a href="https://mail.google.com/mail/u/5/#inbox">gasfiteradomicilio93@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+    
+   

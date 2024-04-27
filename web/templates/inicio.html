@@ -1,0 +1,196 @@
+{% load static %}
+{% include 'base.html' %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+    {% include 'base.html' %}
+    <body>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=56933614411&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20gasfiter%C3%ADa." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+        </a>
+        <!-- header start -->
+        {% include 'header.html' %}
+        {% if messages %}
+            <div style="display: flex;justify-content: center;" id="message">
+                {% for message in messages %}
+                <p class="alert alert-info" style="position: absolute;">{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        <div class="slider-area">
+            <div class="slider-active owl-dot-style owl-carousel">
+                <div class="single-slider pt-175 pb-258 bg-img" style="background-image:url(static/img/slider/slider1.png);">
+                    <div class="container">
+                        <div class="slider-content slider-animated-1">
+                            <h3 class="animated">Bienvenido a </h3>
+                            <h1 class="animated">Gasfiter a domicilio</h1>
+                            <h5 class="animated">Llame al:</h5><br>
+                            <h5 class="animated">+56933614411</h5>
+                            <div class="slider-btn mt-45">
+                                <a class="animated" href="{% url 'servicios' %}">Servicios</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="banner-area">
+            <div class="container">
+                <div class="banner-wrap">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="single-banner img-zoom mb-30">
+                                <a href="">
+                                    <img src="{% static 'img/banner/soldarcobre.jpg' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="single-banner img-zoom mb-30">
+                                <a href="#">
+                                    <img src="{% static 'img/banner/papi.jpg' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="single-banner mb-xs-banner img-zoom mb-30">
+                                <a href="#">
+                                    <img src="{% static 'img/banner/servicio2.jpg' %}" alt="">
+                                </a>
+                                <!--<div class="banner-content">
+                                    <h4>Bottlebrush</h4>
+                                    <a href="#">shop Now</a>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="product-area pt-70 pb-70">
+            <div class="container">
+                <div class="product-top-bar section-border mb-35">
+                    <div class="section-title-wrap">
+                        <h3 class="section-title section-bg-white">Hot Flower</h3>
+                    </div>
+                </div>
+                <div class="featured-product-active hot-flower owl-carousel product-nav">
+                {% for servicio in servicios%}
+                    <div class="product-wrapper">
+                        <div class="product-img">
+                            <a href="{% url 'servicios' %}">
+                                <img alt="" src="{{ servicio.images.url }}">
+                            </a>
+                        </div>
+                        <div class="product-content text-center">
+                            <h4>
+                                <a href="{% url 'servicios' %}">{{ servicio.name }}</a>
+                            </h4>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="new-year-offer-area pb-75">
+            <div class="container">
+                <div class="new-year-offer-wrap pt-70 pb-75 bg-img" style="background-image:url(static/img/banner/fondo.jpg);">
+                    <div class="new-year-offer-content text-center">
+                        <h4>¡Soluciones de gasfitería rápidas y confiables! ¡Contáctanos hoy y mejora tu hogar!</h4><br>
+                        <a href="https://api.whatsapp.com/send?phone=56933614411&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20gasfiter%C3%ADa.">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        {% include 'footer.html' %}
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                                <!-- Thumbnail Large Image start -->
+                                <!-- <div class="tab-content">
+                                    <div id="pro-1" class="tab-pane fade show active">
+                                        <img src="static/img/product-details/product-detalis-l1.jpg" alt="">
+                                    </div>
+                                    <div id="pro-2" class="tab-pane fade">
+                                        <img src="static/img/product-details/product-detalis-l2.jpg" alt="">
+                                    </div>
+                                    <div id="pro-3" class="tab-pane fade">
+                                        <img src="static/img/product-details/product-detalis-l3.jpg" alt="">
+                                    </div>
+                                    <div id="pro-4" class="tab-pane fade">
+                                        <img src="static/img/product-details/product-detalis-l4.jpg" alt="">
+                                    </div>
+                                </div> -->
+                                <!-- Thumbnail Large Image End -->
+                                <!-- Thumbnail Image End -->
+                                <!-- <div class="product-thumbnail">
+                                    <div class="thumb-menu owl-carousel nav nav-style" role="tablist">
+                                        <button class="active" data-bs-toggle="tab" data-bs-target="#pro-1"><img src="static/img/product-details/product-detalis-s1.jpg" alt=""></button>
+                                        <button data-bs-toggle="tab" data-bs-target="#pro-2"><img src="static/img/product-details/product-detalis-s2.jpg" alt=""></button>
+                                        <button data-bs-toggle="tab" data-bs-target="#pro-3"><img src="static/img/product-details/product-detalis-s3.jpg" alt=""></button>
+                                        <button data-bs-toggle="tab" data-bs-target="#pro-4"><img src="static/img/product-details/product-detalis-s4.jpg" alt=""></button>
+                                    </div>
+                                </div> -->
+                                <!-- Thumbnail image end -->
+                            </div>
+                            <div class="col-md-7 col-sm-7 col-xs-12">
+                                <div class="modal-pro-content">
+                                    <h3>Dutchman's Breeches </h3>
+                                    <div class="product-price-wrapper">
+                                        <span class="product-price-old">£162.00 </span>
+                                        <span>£120.00</span>
+                                    </div>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>	
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                            <label>Size*</label>
+                                            <select class="select">
+                                                <option value="">S</option>
+                                                <option value="">M</option>
+                                                <option value="">L</option>
+                                            </select>
+                                        </div>
+                                        <div class="quickview-color-wrap">
+                                            <label>Color*</label>
+                                            <div class="quickview-color">
+                                                <ul>
+                                                    <li class="blue">b</li>
+                                                    <li class="red">r</li>
+                                                    <li class="pink">p</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-quantity">
+                                        <div class="cart-plus-minus">
+                                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </div>
+                                    <span><i class="fa fa-check"></i> In stock</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal end -->
+		<!-- all js here -->
+        {% include 'base.html' %}
+    </body>
+</html>
