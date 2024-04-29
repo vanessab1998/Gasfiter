@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-z5(xs47-v0bqd(bdjjdidm=y63^_(_1ayylgi74*4+u!v5$s2l
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ' django-Pagina-env.eba-hwscwise.us-west-2.elasticbeanstalk.com',
+    'django-Pagina-env.eba-hwscwise.us-west-2.elasticbeanstalk.com',
     'gasfiteradomicilios.cl',
 ]
 
